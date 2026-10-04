@@ -144,3 +144,10 @@ class HYW2FlipPLY:
 
 NODE_CLASS_MAPPINGS["HYW2FlipPLY"] = HYW2FlipPLY
 NODE_DISPLAY_NAME_MAPPINGS["HYW2FlipPLY"] = "HYW2 Flip PLY upright"
+
+
+# frame-0 priority lives in its own module so it can be unit-tested without ComfyUI
+from .frame0 import HYW2Frame0Priority  # noqa: E402
+
+NODE_CLASS_MAPPINGS["HYW2Frame0Priority"] = HYW2Frame0Priority
+NODE_DISPLAY_NAME_MAPPINGS["HYW2Frame0Priority"] = "HYW2 Frame-0 priority (dedupe later views)"
